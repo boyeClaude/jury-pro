@@ -1,13 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { EvenementFeatureComponent } from './evenement-feature.component';
-
+import { EvenementFeatureComponent } from './evenement/evenement-feature.component';
 
 @NgModule({
-    imports: [CommonModule,HttpClientModule],
-    exports: [EvenementFeatureComponent],
-    declarations: [EvenementFeatureComponent],
-    providers: [],
+  imports: [CommonModule, HttpClientModule],
+  declarations: [EvenementFeatureComponent],
+  exports: [],
+  providers: [],
 })
-export class EvenementModule { }
+export class EvenementModule {}
