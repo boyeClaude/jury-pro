@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CandidatPageComponent } from 'src/app/pages/admin/candidat/candidat-page.component';
+import { CriterePageComponent } from 'src/app/pages/admin/critere/critere-page.component';
+import { DashboardPageComponent } from 'src/app/pages/admin/dashboard/dashboard-page.component';
+import { EvenementPageComponent } from 'src/app/pages/admin/evenement/evenement-page.component';
+import { GroupeCandidatPageComponent } from 'src/app/pages/admin/groupe-candidat/groupe-candidat-page.component';
 import { AdminComponent } from './admin/admin.component';
-import { CandidatPageComponent } from './pages/candidat/candidat-page.component';
-import { CriterePageComponent } from './pages/critere/critere-page.component';
-import { DashboardPageComponent } from './pages/dashboard/dashboard-page.component';
-import { EvenementPageComponent } from './pages/evenement/evenement-page.component';
-import { GroupeCandidatPageComponent } from './pages/groupe-candidat/groupe-candidat-page.component';
 
 const routes: Routes = [{ path: '', component: AdminComponent, 
 children:[
