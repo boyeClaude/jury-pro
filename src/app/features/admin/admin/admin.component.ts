@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -6,5 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls:['admin.component.scss']
 })
 export class AdminComponent {
-  constructor() {}
+  constructor(private _router: Router) {}
+
+  logout(){
+    this._router.navigate(['/'])
+  }
 }

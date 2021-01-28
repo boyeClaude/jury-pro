@@ -6,7 +6,6 @@
     <title>Tailwind Admin Template</title>
     <meta name="author" content="Frederic Boye" />
     <meta name="description" content="" />
-    
   </head>
   <body class="bg-gray-100 font-family-karla flex">
     <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
@@ -18,16 +17,58 @@
         >
       </div>
       <!--sidebar-->
-      <app-sidebar></app-sidebar>
+      <app-sidebar>
+        <a
+          routerLink="dashboard"
+          routerLinkActive="active-nav-link"
+          class="flex items-center text-white py-4 pl-6 nav-item"
+        >
+          <i class="fas fa-tachometer-alt mr-3"></i>
+          Dashboard
+        </a>
+        <a
+          routerLink="evenement"
+          routerLinkActive="active-nav-link"
+          class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+        >
+          <i class="fas fa-sticky-note mr-3"></i>
+          Evenement
+        </a>
+        <a
+          routerLink="candidat"
+          routerLinkActive="active-nav-link"
+          class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+        >
+          <i class="fas fa-table mr-3"></i>
+          Candidat
+        </a>
+
+        <a
+          routerLink="critere"
+          routerLinkActive="active-nav-link"
+          class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+        >
+          <i class="fas fa-align-left mr-3"></i>
+          Critere
+        </a>
+        <a
+          routerLink="groupe-candidat"
+          routerLinkActive="active-nav-link"
+          class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+        >
+          <i class="fas fa-tablet-alt mr-3"></i>
+          Groupe Candidat
+        </a>
+      </app-sidebar>
     </aside>
 
     <div class="w-full flex flex-col h-screen overflow-y-hidden">
       <!-- Desktop Header -->
       <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
         <div class="w-1/2"></div>
-        <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end">
-          <button>
-           Logout
+        <div class="relative w-1/2 flex justify-end">
+          <button (click)="logout()" class="py-2 px-4 bg-gray-200">
+            Logout
           </button>
         </div>
       </header>
@@ -37,10 +78,11 @@
 
       <div class="w-full overflow-x-hidden border-t flex flex-col">
         <main class="w-full flex-grow p-6">
-          <h1 class="text-3xl text-black pb-6">Dashboard</h1>
+          <!-- <h1 class="text-3xl text-black pb-6">Title</h1> -->
 
           <div class="bg-white h-full">
-             <p>page dashboard Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus tempore velit ex quam officia voluptatem reiciendis esse commodi pariatur deleniti, nostrum temporibus magni magnam enim blanditiis dolorum excepturi ut quidem fuga cumque laudantium, distinctio, minima qui. Dolor animi eius molestiae nisi, amet quibusdam voluptas est nam quae sapiente, vel reprehenderit.</p>
+            <router-outlet></router-outlet>
+            <!-- <p>page dashboard Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus tempore velit ex quam officia voluptatem reiciendis esse commodi pariatur deleniti, nostrum temporibus magni magnam enim blanditiis dolorum excepturi ut quidem fuga cumque laudantium, distinctio, minima qui. Dolor animi eius molestiae nisi, amet quibusdam voluptas est nam quae sapiente, vel reprehenderit.</p> -->
           </div>
           <!-- <div class="flex flex-wrap mt-6">
             <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
@@ -66,18 +108,18 @@
               <i class="fas fa-list mr-3"></i> Latest Reports
             </p>
             <div class="bg-white overflow-auto"> -->
-              <!--table-->
-              <!-- <app-table></app-table> 
+          <!--table-->
+          <!-- <app-table></app-table> 
             </div>
           </div> -->
         </main>
       </div>
     </div>
 
-    <script
+    <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
       integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
   </body>
 </html>
