@@ -1,9 +1,9 @@
 <a
-  (click)="AjouterEvenement()"
-  routerLink="evenement/liste"
+  (click)="AjouterCritere()"
+  routerLink="critere/liste"
   class="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg cursor-pointer"
 >
-  Ajouter un evenement
+  Ajouter un critere
 </a>
 
 <!-- separator -->
@@ -12,24 +12,22 @@
 <!-- dist list table component -->
 <div class="text-gray-900 bg-gray-200">
   <div class="p-4 flex">
-    <h1 class="text-3xl">Liste des Evenements</h1>
+    <h1 class="text-3xl">Liste des Criteres</h1>
   </div>
   <div class="px-3 py-4 flex justify-center">
-    <div class="overflow-x-scroll">
+    <div class="xl:overflow-x-scroll">
       <table class="w-full text-md bg-white shadow-md rounded mb-4">
         <tbody>
           <tr class="border-b">
-            <th class="text-left p-3 px-5">Evenement Nom</th>
-            <th class="text-left p-3 px-5">Evenement Type</th>
-            <th class="text-left p-3 px-5">Date Debut</th>
-            <th class="text-left p-3 px-5">Date Fin</th>
+            <th class="text-left p-3 px-5">Libelle</th>
+            <th class="text-left p-3 px-5">Bareme</th>
+            <th class="text-left p-3 px-5">Type Evenement</th>
             <th class="text-left p-3 px-5">Actions</th>
           </tr>
           <tr class="border-b hover:bg-orange-100 bg-gray-100">
-            <td class="p-3 px-5">Danse avec des stars</td>
+            <td class="p-3 px-5">Prestation scenique</td>
+            <td class="p-3 px-5">/20</td>
             <td class="p-3 px-5">Groupe</td>
-            <td class="p-3 px-5">12 Mars 2021</td>
-            <td class="p-3 px-5">18 Juin 2021</td>
             <td class="p-3 px-5 flex justify-end">
               <button
                 type="button"
@@ -46,10 +44,9 @@
           </tr>
           <!-- second row -->
           <tr class="border-b hover:bg-orange-100 bg-gray-100">
-            <td class="p-3 px-5">Star Karaoke</td>
+            <td class="p-3 px-5">Justesse du chant</td>
+            <td class="p-3 px-5">/40</td>
             <td class="p-3 px-5">Candidat</td>
-            <td class="p-3 px-5">12 Juin 2021</td>
-            <td class="p-3 px-5">20 Juillet 2021</td>
             <td class="p-3 px-5 flex justify-end">
               <button
                 type="button"
