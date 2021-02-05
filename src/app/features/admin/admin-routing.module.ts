@@ -14,6 +14,8 @@ import { AjouterEvenementComponent } from './evenement/ajouter-evenement/ajouter
 import { ListeEvenementComponent } from './evenement/liste-evenement/liste-evenement.component';
 import { AddGroupeCandidatComponent } from './groupe-candidat/add-groupe-candidat/add-groupe-candidat.component';
 import { ListeGroupeCandidatComponent } from './groupe-candidat/liste-groupe-candidat/liste-groupe-candidat.component';
+import { AjouterGroupeComponent } from './groupe/ajouter-groupe/ajouter-groupe.component';
+import { ListeGroupeComponent } from './groupe/liste-groupe/liste-groupe.component';
 
 const routes: Routes = [{ path: '', component: AdminComponent, 
 children:[
@@ -32,6 +34,8 @@ children:[
   {path:'candidat/liste', component: ListeCandidatComponent},
   {path:'groupe-candidat/liste', component: ListeGroupeCandidatComponent},
   {path:'groupe-candidat/add', component: AddGroupeCandidatComponent},
+  {path:'groupe/liste', component: ListeGroupeComponent},
+  {path:'groupe/add', component: AjouterGroupeComponent},
 ] 
 }];
 
