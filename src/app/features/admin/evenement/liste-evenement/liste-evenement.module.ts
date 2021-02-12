@@ -6,6 +6,5 @@ import { CommonModule } from '@angular/common';
     imports: [CommonModule],
     exports: [ListeEvenementComponent],
     declarations: [ListeEvenementComponent],
-    providers: [],
 })
 export class ListeEvenementModule { }

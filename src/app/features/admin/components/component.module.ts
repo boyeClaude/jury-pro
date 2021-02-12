@@ -9,5 +9,6 @@ import { TableComponent } from './table/table.component';
     exports: [SideBarComponent, TableComponent,MobileNavigationComponent],
     declarations: [SideBarComponent, TableComponent, MobileNavigationComponent],
     providers: [],
+   
 })
 export class ComponentModule { }

@@ -9,6 +9,9 @@ import { ListeEvenementService } from './liste-evenement.service';
 })
 
 export class ListeEvenementComponent implements OnInit {
+
+    evenements = [];
+
     constructor(private _router: Router, private listeEvenementService:ListeEvenementService) { }
 
     ngOnInit() {
@@ -20,7 +23,11 @@ export class ListeEvenementComponent implements OnInit {
     }
 
     getAllEvenement(){
-        this.listeEvenementService.getAllEvenement().subscribe( (response) => console.log(response));
+        this.listeEvenementService.getAllEvenement().subscribe( 
+            (evenement) => {
+                this.evenements = evenement
+                console.log(evenement);
+            });
     }
 
 
